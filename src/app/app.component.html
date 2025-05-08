@@ -9,7 +9,9 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">Price: ₹{{ (product.price / 100).toFixed(2) }}</p>
+          <p class="card-text">Price: ₹{{ (product.price / 100).toFixed(2) }}
+            <strong>{{ product?.offer }}</strong>
+          </p>
           <button class="btn btn-primary w-100" (click)="addToCart(product)">
             Add to Cart
           </button>
